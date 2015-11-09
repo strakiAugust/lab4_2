@@ -1,0 +1,28 @@
+<html>
+<head>
+<style type="text/css">
+span.highlight
+{
+background-color:yellow
+}
+body {background-color: pink; color: yellow;}
+th {background-color: blue}
+td {background-color: red}
+</style>
+</head>
+
+<form action="/updatebook/?id={{updatebook.id}}" method="post">
+<table border=1 align="center">
+	<tr>
+		<th>isbn</th><th>title</th><th>authorid</th><th>publisher</th><th>publishdate</th><th>price</th>
+	<tr/>
+	<tr>
+		<td><input name="isbn" type="text" value={{ updatebook.isbn }} class="highlight"></td>
+		<td><input name="title" type="text" value={{ updatebook.title }}></td>
+		<td><input name="authorid" type="text" value={{ updatebook.authorid }}></td>
+		<td><input name="publisher" type="text" value={{ updatebook.publisher }}></td>
+		<td><input name="publishdate" type="text" value={{ updatebook.publishdate }}></td>
+		<td><input name="price" type="text" value={{ updatebook.price }}></td>
+		<td><input type="submit" value="保存"></td>
+	</tr>
+</html>

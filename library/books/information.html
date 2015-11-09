@@ -1,0 +1,27 @@
+<p>About the book: <strong>{{ book.title }}</strong></p>
+
+<table border=1>
+	<tr>
+		<th>ISBN</th><th>title</th><th>authorid</th><th>publisher</th><th>publishdate</th><th>price</th>
+	<tr/>
+	<tr>
+		<td>{{ book.isbn }}</td>
+		<td>{{ book.title }}</td>
+		<td>{{ book.authorid }}</td>
+		<td>{{ book.publisher }}</td>
+		<td>{{ book.publishdate }}</td>
+		<td>{{ book.price }}</td>
+	</tr>
+</table>
+<p>And also its author: <strong>{{ book.title }}</strong></p>
+<table border=1>
+	<tr>
+		<th>authorid</th><th>name</th><th>age</th><th>country</th>
+	<tr/>
+	<tr>
+		<td>{{ author.authorid }}</td>
+		<td>{{ author.name }}</td>
+		<td>{{ author.age }}</td>
+		<td>{{ author.country }}</td>
+	</tr>
+</table>

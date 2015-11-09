@@ -1,0 +1,15 @@
+<table border=1 align="center">
+	<tr>
+		<th>authorid</th><th>name</th><th>age</th><th>countyr</th><th>id</th>
+	<tr/>
+{% for author in authorlist %}
+	<tr>
+		<td>{{ author.authorid }}</td>
+		<td>{{ author.name }}</td>
+		<td>{{ author.age }}</td>
+		<td>{{ author.country }}</td>
+		<td>{{ author.id }}</td>
+		<td><button onclick="location.href='/deleteauthor/?id={{author.id}}'" class="btn">删除</button></td>
+	</tr>
+{% endfor %}
+</table>

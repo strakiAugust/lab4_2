@@ -1,0 +1,18 @@
+<table border=1 align="center">
+	<tr>
+		<th>ISBN</th><th>title</th><th>authorid</th><th>publisher</th><th>publishdate</th><th>price</th><th>id</th>
+	<tr/>
+{% for book in booklist %}
+	<tr>
+		<td>{{ book.isbn }}</td>
+		<td>{{ book.title }}</td>
+		<td>{{ book.authorid }}</td>
+		<td>{{ book.publisher }}</td>
+		<td>{{ book.publishdate }}</td>
+		<td>{{ book.price }}</td>
+		<td>{{ book.id }}</td>
+		<td><button onclick="location.href='/updatebookform/?id={{book.id}}'" class="btn">更新</button></td>
+		<td><button onclick="location.href='/deletebook/?id={{book.id}}'" class="btn">删除</button></td>
+	</tr>
+{% endfor %}
+</table>
